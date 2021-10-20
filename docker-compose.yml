@@ -1,0 +1,7 @@
+
+version: '2'
+services:
+  testwebrtc:
+    image: mailbyms/testwebrtc
+    ports:
+      - 8083:80

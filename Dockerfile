@@ -1,11 +1,10 @@
 ### phase 1
 FROM node:12.22.6 
 
-RUN apt update \
-    && apt install -y git \
-    && git clone https://github.com/webrtc/testrtc
+WORKDIR /
 
-RUN cd testrtc \
+RUN git clone https://github.com/webrtc/testrtc \
+    && cd testrtc \
     && npm install \
     && npm i -g bower grunt \
     && bower update \
